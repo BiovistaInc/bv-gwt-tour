@@ -1,0 +1,3 @@
+[submodule "gwt-tour"]
+	path = gwt-tour
+	url = https://github.com/BiovistaInc/gwt-tour.git
