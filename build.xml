@@ -9,17 +9,25 @@
 
 	<path id="bv-gwt-tour.classpath">
 		<pathelement location="${build_dir}"/>
+		<pathelement location="../bv-ahome-core/build"/>
 		<path refid="gwt-sdk.userclasspath"/>
 	</path>
 
 	<path id="bv-gwt-tour.srcpath">
+		<pathelement location="../bv-ahome-core/ahome-core/ahome-core/src/main/java"/>
 		<pathelement location="./gwt-tour/ahome-tour/src/main/java"/>
 	</path>
 
 	<target name="cleanall" description="cleans all dependendant projects" depends="clean">
+		<ant antfile="build.xml" dir="../bv-ahome-core" inheritAll="false" target="cleanall"/>
 	</target>
 
 	<target name="build-subprojects">
+	        <ant antfile="build.xml" dir="../bv-ahome-core" inheritAll="false" target="build">
+			<propertyset>
+				<propertyref name="build.compiler"/>
+			</propertyset>
+		</ant>
 	</target> 
 
 	<target name="build-project" depends="init">
