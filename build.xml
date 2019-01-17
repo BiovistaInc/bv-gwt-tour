@@ -11,7 +11,6 @@
 	<path id="bv-gwt-tour.classpath">
 		<pathelement location="${build_dir}"/>
 		<pathelement location="../bv-ahome-core/build"/>
-		<path refid="gwt-sdk.userclasspath"/>
 	</path>
 
 	<path id="bv-gwt-tour.srcpath">
